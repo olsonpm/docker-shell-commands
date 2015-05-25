@@ -1,0 +1,11 @@
+function c_docker_rma
+{
+    docker rm -f $(docker ps -a -q)
+}
+
+function c_docker_stopa
+{
+    docker stop $(docker ps -a -q)
+}
+
+export -f c_docker_rma
